@@ -1,0 +1,39 @@
+{
+  "articles": [
+    {
+      "reference": "blabla",
+      "date": "2023-02-16T23:00:00.000Z",
+      "quantite": 3,
+      "commentaire": "comment",
+      "id": 1
+    },
+    {
+      "reference": "http://cokeurl.com/q/2017-00828 text",
+      "date": "2023-02-18T23:00:00.000Z",
+      "quantite": 2,
+      "commentaire": "comm2",
+      "id": 3
+    },
+    {
+      "reference": "http://cokeurl.com/q/2017-00828 ",
+      "date": "2023-02-18T23:00:00.000Z",
+      "quantite": 2,
+      "commentaire": "comm6",
+      "id": 7
+    },
+    {
+      "reference": "http://cokeurl.com/q/2017-00828",
+      "date": "2023-02-18T23:00:00.000Z",
+      "quantite": 4,
+      "commentaire": "commmmm",
+      "id": 9
+    },
+    {
+      "reference": "http://cokeurl.com/q/2017-00828",
+      "date": "2023-02-19T23:00:00.000Z",
+      "quantite": 1,
+      "commentaire": "test 20/02/23",
+      "id": 10
+    }
+  ]
+}

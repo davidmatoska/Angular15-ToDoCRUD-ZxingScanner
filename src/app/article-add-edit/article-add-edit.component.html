@@ -1,0 +1,52 @@
+
+
+<zxing-scanner [formats]="allowedFormats" (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+ 
+<p>
+    <small>Scan Result</small>
+    <strong>{{scanResult}}</strong>
+</p>
+
+
+<div mat-dialog-title>
+    <h1>
+        Contenu Article
+    </h1>
+</div>
+
+<form [formGroup]="articleForm" (ngSubmit)="onFormSubmit()">
+<div mat-dialog-content class="content">
+    <div class ="row">
+          <mat-form-field appearance="outline">
+            <mat-label>Référence</mat-label>
+            <input matInput type="text" placeholder="scanner QRcode pour ref" formControlName="reference" [(ngModel)]="scanResult" >
+          </mat-form-field>
+       
+          <mat-form-field appearance="fill">
+            <mat-label>Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="date">
+            <mat-hint></mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker inputFormat="dd/MM/yyyy" #picker></mat-datepicker>
+          </mat-form-field>
+    </div>
+
+    <div class ="row">
+        <mat-form-field appearance="fill">
+            <mat-label>Quantité</mat-label>
+            <input matInput type="number" placeholder="Quantité" formControlName="quantite">
+          </mat-form-field>
+       
+          <mat-form-field appearance="fill">
+            <mat-label>Commentaire</mat-label>
+            <input matInput type="text" placeholder="Commentaire" formControlName="commentaire">
+          </mat-form-field>
+  </div>
+</div>
+
+
+<div mat-dialog-actions class="action">
+    <button mat-raised-button color="accent" type="button" [mat-dialog-close]="false">Annuler</button>
+    <button mat-raised-button color="primary" type="submit">{{data ? 'Modifier':'Enregistrer'}}</button>
+</div>
+</form>
